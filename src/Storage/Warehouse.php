@@ -2,16 +2,18 @@
 
 namespace h4kuna\Exchange\Storage;
 
-use DateTime,
-	h4kuna\Exchange,
-	Nette\Object;
+use DateTime;
+use h4kuna\Exchange;
+use Nette\SmartObject;
 
 /**
  *
  * @author Milan Matějček
  */
-class Warehouse extends Object implements IWarehouse
+class Warehouse implements IWarehouse
 {
+
+    use SmartObject;
 
 	/** @var Stock */
 	private $stock;

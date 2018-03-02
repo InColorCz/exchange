@@ -2,13 +2,15 @@
 
 namespace h4kuna\Exchange\Storage;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * @author Milan Matějček
  */
-abstract class RequestManager extends Object implements IRequestManager
+abstract class RequestManager implements IRequestManager
 {
+
+    use SmartObject;
 
 	/** @return string */
 	public function getParamCurrency()

@@ -2,16 +2,18 @@
 
 namespace h4kuna\Exchange\Nette;
 
-use h4kuna\Exchange\Storage,
-	Nette,
-	Nette\Caching;
+use h4kuna\Exchange\Storage;
+use Nette\Caching;
+use Nette\SmartObject;
 
 /**
  *
  * @author Milan Matějček
  */
-final class CacheFactory extends Nette\Object implements Storage\IFactory
+final class CacheFactory implements Storage\IFactory
 {
+
+    use SmartObject;
 
 	/** @var Caching\IStorage */
 	private $storage;

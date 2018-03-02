@@ -2,16 +2,18 @@
 
 namespace h4kuna\Exchange\Driver;
 
-use DateTime,
-	h4kuna\Exchange,
-	Nette;
+use DateTime;
+use h4kuna\Exchange;
+use Nette\SmartObject;
 
 /**
  * Download currency from server.
  * @author Milan Matějček
  */
-abstract class Download extends Nette\Object
+abstract class Download
 {
+
+    use SmartObject;
 
 	/**
 	 * Download data from remote source and save.
